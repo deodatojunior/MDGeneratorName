@@ -16,7 +16,6 @@ import requests
 import names
 
 def index(request):
-    type
     if request.method == 'POST':
         abc = [{'name': names.get_first_name(gender='female')}]
     else:
