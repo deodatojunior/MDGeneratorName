@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h3>Generate name</h3>
+            <div class="form-group">
+                <span><button name="name" type="submit" class="btn btn-success">Generate</button></span>
+            </div>
+        </div>
+    </div>
+</form>
+<br>
+<br>
+{% for x in lista %}
+<h1>Generated name: {{ x.name }}</h1>
+{% endfor %}
+
+{% endblock %}
